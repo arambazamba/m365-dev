@@ -11,7 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^0.21.1",
-    "bootstrap": "^5.0.0-alpha2",
+    "bootstrap": "^5.0.0-beta2",
     "msal": "^1.4.1"
   },
   "devDependencies": {
