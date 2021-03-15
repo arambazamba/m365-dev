@@ -7,6 +7,10 @@ console.log(`Manually init util`);
 let util = new Util();
 util.log();
 
+util
+  .getFood("http://localhost:3000/food")
+  .then((data) => console.log(`current food: ${data}`));
+
 console.log(`Init State`);
 
 let state = new State();
