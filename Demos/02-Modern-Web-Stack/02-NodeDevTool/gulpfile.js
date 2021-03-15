@@ -36,25 +36,3 @@ gulp.task("babel", () => {
     .pipe(sourcemaps.write("."))
     .pipe(gulp.dest(paths.dist));
 });
-
-// Upload to Files to SharePoint - local SharePoint @ http://sp2019 installed
-
-var spsaveCoreOption = {
-  siteUrl: "http://sp2019",
-  folder: "Shared%20Documents",
-  checkin: true,
-  checkinType: 1,
-  flatten: false,
-  notification: true,
-};
-
-var spsaveCredential = {
-  username: "spdom\\administrator",
-  password: "Pa$$w0rd",
-};
-
-gulp.task("upload-sp", function() {
-  return gulp
-    .src("./dist/**/*")
-    .pipe(spsave(spsaveCoreOption, spsaveCredential));
-});
