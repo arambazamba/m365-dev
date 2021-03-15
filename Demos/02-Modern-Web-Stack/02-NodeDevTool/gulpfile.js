@@ -4,7 +4,6 @@ var sourcemaps = require("gulp-sourcemaps");
 var concat = require("gulp-concat");
 var babel = require("gulp-babel");
 var sourcemaps = require("gulp-sourcemaps");
-var spsave = require("gulp-spsave");
 
 var paths = {
   scriptSource: "./src/scripts/*.js",
@@ -14,16 +13,13 @@ var paths = {
 
 // Compile sass
 
-gulp.task("compile-sass", function() {
-  return gulp
-    .src(paths.scss)
-    .pipe(sass())
-    .pipe(gulp.dest(paths.dist));
+gulp.task("compile-sass", function () {
+  return gulp.src(paths.scss).pipe(sass()).pipe(gulp.dest(paths.dist));
 });
 
 // Watch sass
 
-gulp.task("watch-sass", function() {
+gulp.task("watch-sass", function () {
   gulp.watch(paths.scss, ["compile-sass"]);
 });
 
