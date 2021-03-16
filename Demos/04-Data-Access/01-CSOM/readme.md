@@ -6,6 +6,8 @@
 
 [Common CSOM Tasks](<https://docs.microsoft.com/en-us/previous-versions/office/developer/sharepoint-2010/ee537013(v=office.14)>)
 
+[Using CSOM for .NET Standard instead of CSOM for .NET Framework](https://docs.microsoft.com/en-us/sharepoint/dev/sp-add-ins/using-csom-for-dotnet-standard)
+
 ## PnP Sites Core
 
 > Note: Extends in C#

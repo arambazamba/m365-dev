@@ -8,6 +8,8 @@
 
 ## Patterns and Practices - PnP
 
+[PnP - Microsoft 365 Community](https://pnp.github.io/)
+
 [SharePoint Developer Community (SharePoint PnP) resources](https://docs.microsoft.com/en-us/sharepoint/dev/community/community)
 
 ### PnP PowerShell
