@@ -1,5 +1,7 @@
 # SharePoint REST Api
 
-[REST Api](https://docs.microsoft.com/en-us/sharepoint/dev/sp-add-ins/sharepoint-net-server-csom-jsom-and-rest-api-index)
+[SharePoint REST Service Docs](https://docs.microsoft.com/en-us/sharepoint/dev/sp-add-ins/get-to-know-the-sharepoint-rest-service?tabs=csom)
 
-[SharePoint Rest - Gettings started](http://www.codeproject.com/Articles/990131/CRUD-Operation-to-List-Using-SharePoint-Rest-API)
+[SharePoint .NET Server, CSOM, JSOM, and REST API index](https://docs.microsoft.com/en-us/sharepoint/dev/sp-add-ins/sharepoint-net-server-csom-jsom-and-rest-api-index)
+
+[SP Insider - Chrome Extension](https://chrome.google.com/webstore/detail/sp-insider/gjckpigahcbffmeofjfedlffddhfidhj)

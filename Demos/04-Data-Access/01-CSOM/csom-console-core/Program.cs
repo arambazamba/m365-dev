@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Net.Http;
 using System.Security;
 using System.Text;
@@ -41,10 +42,27 @@ namespace csom_console_core
                 e.WebRequestExecutor.RequestHeaders["Authorization"] = "Bearer " + token;
             };
 
+            //Get web title
             ctx.Load(ctx.Web);
             ctx.ExecuteQuery();
-            Console.WriteLine("web title");
-            Console.WriteLine(ctx.Web.Title);
+
+            ctx.Load(ctx.Web, w => w.Title);
+            ctx.ExecuteQuery();            
+
+            Console.WriteLine("Your site title is: " + ctx.Web.Title);
+
+            //Get Lists in Web
+            Web web = ctx.Web;                
+            ListCollection lists = web.Lists;
+            
+            //context.Load(lists);
+            ctx.Load(lists, l=>l.Include(item=>item.Title, item =>item.Created));
+            ctx.ExecuteQuery();
+
+            foreach (List l in lists)
+            {
+                Console.WriteLine(l.Title);
+            }
 
             //Create item
             var listName = "Aufgaben";
@@ -72,6 +90,16 @@ namespace csom_console_core
             deleteItem.DeleteObject();
             ctx.ExecuteQuery(); 
             Console.WriteLine("List Item deleted - check in SP");
+
+            //Create List - Traditional  
+            ListCreationInformation listInfo = new ListCreationInformation
+            {
+                Title = "CSOMList",
+                TemplateType = (int) ListTemplateType.GenericList
+            };
+            List cl = web.Lists.Add(listInfo);
+            cl.Update();
+            ctx.ExecuteQuery();
         }
 
         public static SecureString getPasswordFromConsole(String displayMessage) {
