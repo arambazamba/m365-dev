@@ -1,7 +1,5 @@
 # MS Graph
 
-## Readings
-
 [MS Graph Home](https://developer.microsoft.com/en-us/graph)
 
 [MS Graph API Reference](https://docs.microsoft.com/en-us/graph/api/overview?view=graph-rest-1.0)
