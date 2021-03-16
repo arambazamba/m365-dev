@@ -2,7 +2,7 @@ $site="https://integrationsonline.sharepoint.com/sites/M365Dev";
 $list="Skills"
 
 # replace with value from create-func-app.azcli if you have deployed your function app to Azure
-# $funcapp="m365dev-webhook-46";
+# $funcapp="webhookapp-27525";
 # $url="https://$($funcapp).azurewebsites.net/api/spwebhook"
 
 # use this for ngrok version
