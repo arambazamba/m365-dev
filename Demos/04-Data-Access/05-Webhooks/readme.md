@@ -8,7 +8,6 @@
 
 ## Demo
 
-<<<<<<< HEAD
 - 01-AzureFunct: An Azure Function acting as an endpoint for a SharePoint Webhook
 - 02-ReferenceImplementation
 
@@ -19,6 +18,3 @@
 - Watch logs or queue for change
 
 > Note: If you want to complete this sample follow the PNP Webhook sample implementation @https://docs.microsoft.com/en-us/sharepoint/dev/apis/webhooks/webhooks-reference-implementation
-=======
-- SP Webhooks Basics using Azure Functions
->>>>>>> react-context-msal
