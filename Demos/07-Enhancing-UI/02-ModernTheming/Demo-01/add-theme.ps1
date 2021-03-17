@@ -1,4 +1,3 @@
-Import-Module Microsoft.Online.SharePoint.Powershell
 $adminUPN = "alexander.pajer@integrations.at"
 $tenant = "integrationsonline"
 $userCredential = Get-Credential -UserName $adminUPN -Message "Type the password for $adminUPN"

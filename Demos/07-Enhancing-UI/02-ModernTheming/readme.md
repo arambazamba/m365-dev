@@ -1,5 +1,10 @@
 # Theming
 
+## Demos
+
+- Add a custom Theme
+- View and List Formatting
+
 ## Modern UI
 
 [Customizing the "modern" experiences in SharePoint Online](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/modern-experience-customizations)

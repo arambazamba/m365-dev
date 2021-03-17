@@ -35,9 +35,7 @@ export interface ISpFxPropsWebPartProps {
   listName: string;
 }
 
-export default class SpFxPropsWebPart extends BaseClientSideWebPart<
-  ISpFxPropsWebPartProps
-> {
+export default class SpFxPropsWebPart extends BaseClientSideWebPart<ISpFxPropsWebPartProps> {
   private _options: IPropertyPaneDropdownOption[];
 
   protected onInit(): Promise<void> {

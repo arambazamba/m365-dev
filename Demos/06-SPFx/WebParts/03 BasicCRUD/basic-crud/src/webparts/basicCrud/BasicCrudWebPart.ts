@@ -4,7 +4,6 @@ import {
   PropertyPaneTextField,
 } from "@microsoft/sp-property-pane";
 import { BaseClientSideWebPart } from "@microsoft/sp-webpart-base";
-import { escape } from "@microsoft/sp-lodash-subset";
 
 import styles from "./BasicCrudWebPart.module.scss";
 import * as strings from "BasicCrudWebPartStrings";
@@ -16,9 +15,7 @@ export interface IBasicCrudWebPartProps {
   description: string;
 }
 
-export default class BasicCrudWebPart extends BaseClientSideWebPart<
-  IBasicCrudWebPartProps
-> {
+export default class BasicCrudWebPart extends BaseClientSideWebPart<IBasicCrudWebPartProps> {
   private _listName: string = "News";
   private _listItemEntityTypeFullName: string;
 
