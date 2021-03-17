@@ -1,0 +1,17 @@
+.container {
+  margin: 1rem;
+  padding: 1rem;
+  background-color: lavender;
+  height: 80vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.item {
+  min-height: 200px;
+  min-width: 100px;
+  background-color: lawngreen;
+  margin: 1rem;
+  flex-grow: 2;
+}
