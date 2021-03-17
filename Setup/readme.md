@@ -22,7 +22,7 @@ az vm create -g $grp -n $vmname --admin-username $user --admin-password $pwd --i
 > Note: You could also execute `create-lab-vm.sh` or run the following remote script in Cloud Shell
 
 ```bash
-curl https://raw.githubusercontent.com/ARambazamba/az-400-v2/master/Labs/Setup/create-lab-vm.sh | bash
+curl https://raw.githubusercontent.com/ARambazamba/M365-Dev/main/Setup/create-lab-vm.sh | bash
 ```
 
 ![create-labvm](_images/create-lab-vm.jpg)
