@@ -80,6 +80,29 @@ export class SPRestClient {
     console.log("don't forget to fix id in next samples");
   }
 
+  async createFolder(listName: string) {
+    const baseUrl = `https://${this.tenant}.sharepoint.com/_api`;
+    const qry = `lists/getByTitle('${listName}')/Items`;
+    const token = await this.getToken();
+
+    const item = JSON.stringify({
+      __metadata: { type: "SP.List" },
+      Title: "Task from REST",
+    });
+
+    const result = await fetch(`${baseUrl}/${qry}`, {
+      method: "Post",
+      body: item,
+      headers: {
+        Authorization: "Bearer " + token.accessToken,
+        Accept: "application/json;odata=verbose",
+        "content-type": "application/json;odata=verbose",
+      },
+    });
+    console.log("insert result:", result);
+    console.log("don't forget to fix id in next samples");
+  }
+
   async updateItem(listName: string, id: number, title: string) {
     const baseUrl = `https://${this.tenant}.sharepoint.com/_api`;
     const qry = `lists/getByTitle('${listName}')/Items(${id})`;

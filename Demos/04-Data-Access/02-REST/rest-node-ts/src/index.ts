@@ -16,7 +16,6 @@ export async function runSample() {
 
 export async function authClient() {
   const spTenant = "integrationsonline";
-
   const config = {
     auth: {
       clientId: "024bf89c-83e1-45b5-8797-f013cf920cc5",
