@@ -11,7 +11,7 @@
 
 [Site Theming](https://docs.microsoft.com/en-us/sharepoint/dev/declarative-customization/site-theming/sharepoint-site-theming-overview)
 
-[Modern UI Theme Generator](https://developer.microsoft.com/en-us/fabric#/styles/themegenerator)
+[Modern UI Theme Generator](https://fabricweb.z5.web.core.windows.net/pr-deploy-site/refs/heads/7.0/theming-designer/index.html)
 
 [SharePoint Online Powershell Cmd Reference](https://docs.microsoft.com/en-us/powershell/module/sharepoint-online/?view=sharepoint-ps)
 
