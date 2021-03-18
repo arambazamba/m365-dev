@@ -57,16 +57,14 @@ Uninstall-PnPApp -Identity $appid -Scope Tenant
 Remove-PnPApp -Identity $appid -Scope Tenant
 ```
 
-### Office 365 CLI
+### Microsoft 365 CLI
 
-[Office 365 Documentation](https://pnp.github.io/office365-cli/)
+[Microsoft 365 CLI](https://pnp.github.io/cli-microsoft365/)
 
-[Office CLI Reference](https://pnp.github.io/office365-cli/cmd/spo/login/)
-
-#### Install Office 365 CLI & Interactive Samples
+#### Install Microsoft 365 CLI & Interactive Samples
 
 ```
-npm install -g @pnp/office365-cli
+npm i -g @pnp/cli-microsoft365
 ```
 
 Login
