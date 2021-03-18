@@ -5,8 +5,8 @@
 [PnP Remote Provisioning Introduction](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/pnp-remote-provisioning)
 
 > PnP Provisioning is used in [
-SharePoint Online Provisioning Service
-](https://provisioning.sharepointpnp.com/)
+> SharePoint Online Provisioning Service
+> ](https://provisioning.sharepointpnp.com/)
 
 ## Application Life Cycle Management
 
@@ -16,7 +16,7 @@ Install PnP Powershell
 
 ```
 Install-Module -Name PowerShellGet –Force
-Install-Module SharePointPnPPowerShellOnline
+Install-Module -Name PnP.PowerShell
 ```
 
 [Application Lifecycle Management (ALM) APIs](https://docs.microsoft.com/en-us/sharepoint/dev/apis/alm-api-for-spfx-add-ins)
@@ -37,7 +37,7 @@ Upload & Deploy Package from Terminal:
 ```Powershell
 $tenant = "integrationsonline"
 Connect-PnPOnline -url https://$tenant.sharepoint.com
-$objAppId = Add-PnPApp -Path ./spfx-alm/sharepoint/solution/sp-fx-alm.sppkg -Overwrite 
+$objAppId = Add-PnPApp -Path ./spfx-alm/sharepoint/solution/sp-fx-alm.sppkg -Overwrite
 [GUID]$appid = $objAppId.Id
 Write-Host "App added to catalog"
 Publish-PnPApp -Identity $appid -Scope Tenant
@@ -90,7 +90,7 @@ spo app list -o json
 
 #### Writing CLI Scripts
 
->Note: To write Powershell script simply use Powershell and prefix Office CLI script with `o365`
+> Note: To write Powershell script simply use Powershell and prefix Office CLI script with `o365`
 
 List apps available in the tenant app catalog - deploy those that are not deployed
 
@@ -99,11 +99,11 @@ $apps = o365 spo app list -o json | ConvertFrom-Json
 $apps | ? Deployed -eq $false | % { o365 spo app deploy -i $_.ID }
 ```
 
-Add app to catalog - requires login 
+Add app to catalog - requires login
 
 ```Powershell
 $siteUrl = "https://integrationsonline.sharepoint.com/sites/DevGrp"
-$appId = o365 spo app add --filePath ./spfx-alm/sharepoint/solution/sp-fx-alm.sppkg --overwrite 
+$appId = o365 spo app add --filePath ./spfx-alm/sharepoint/solution/sp-fx-alm.sppkg --overwrite
 o365 spo app deploy --id $appId --skipFeatureDeployment
 o365 spo app install --id $appId --siteUrl $siteUrl
 ```
