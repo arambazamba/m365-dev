@@ -1,8 +1,8 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
   "solution": {
-    "name": "sp-fx-web-part-client-side-solution",
-    "id": "ca491b67-1db1-4d15-aedb-a5b718de7ac8",
+    "name": "sp-fx-dev-ops-client-side-solution",
+    "id": "543bf8ae-b89e-4ee1-a182-deb84c500556",
     "version": "1.0.0.0",
     "includeClientSideAssets": true,
     "isDomainIsolated": false,
@@ -15,6 +15,6 @@
     }
   },
   "paths": {
-    "zippedPackage": "solution/sp-fx-web-part.sppkg"
+    "zippedPackage": "solution/sp-fx-dev-ops.sppkg"
   }
 }

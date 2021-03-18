@@ -1,10 +1,11 @@
 {
   "@microsoft/generator-sharepoint": {
     "version": "1.11.0",
-    "libraryName": "sp-fx-web-part",
-    "libraryId": "ca491b67-1db1-4d15-aedb-a5b718de7ac8",
+    "libraryName": "sp-fx-dev-ops",
+    "libraryId": "543bf8ae-b89e-4ee1-a182-deb84c500556",
     "environment": "spo",
     "packageManager": "npm",
+    "framework": "react",
     "isCreatingSolution": true,
     "isDomainIsolated": false,
     "componentType": "webpart"
