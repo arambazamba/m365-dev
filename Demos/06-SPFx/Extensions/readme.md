@@ -2,6 +2,10 @@
 
 [Overview of SharePoint Framework Extensions](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/extensions/overview-extensions)
 
+[SharePoint Framework Extensions Samples & Tutorial Materials](https://github.com/SharePoint/sp-dev-fx-extensions)
+
+## App Customizer
+
 Test a specific extension:
 
 ```
@@ -42,6 +46,12 @@ Choose "Load debug scripts"
 
 > For Toaster Sample create Powershell to creat the list and insert at least one item to the list
 
-# Further Material
+## Field Customizer
 
-[SharePoint Framework Extensions Samples & Tutorial Materials](https://github.com/SharePoint/sp-dev-fx-extensions)
+Sample fld-customizer:
+
+![percentage-fld.jpg](./_images/percentage-fld.jpg)
+
+Sample fld-customizer-react:
+
+![isActive-fld.jpg](./_images/isActive-fld.jpg)
