@@ -1,8 +1,8 @@
 {
   "@microsoft/generator-sharepoint": {
     "version": "1.11.0",
-    "libraryName": "fld-customizer",
-    "libraryId": "e32df35f-1d57-4d9d-b241-099b0212af17",
+    "libraryName": "field-customizer-react",
+    "libraryId": "4da75b1f-f661-4ee9-a5e8-62b68cea2228",
     "environment": "spo",
     "packageManager": "npm",
     "isCreatingSolution": true,

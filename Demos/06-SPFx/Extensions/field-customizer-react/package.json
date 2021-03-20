@@ -1,5 +1,5 @@
 {
-  "name": "fld-customizer",
+  "name": "field-customizer-react",
   "version": "0.0.1",
   "private": true,
   "main": "lib/index.js",
@@ -12,11 +12,17 @@
     "test": "gulp test"
   },
   "dependencies": {
-    "@microsoft/sp-core-library": "1.11.0",
     "@microsoft/decorators": "1.11.0",
-    "@microsoft/sp-listview-extensibility": "1.11.0"
+    "@microsoft/sp-core-library": "1.11.0",
+    "@microsoft/sp-listview-extensibility": "1.11.0",
+    "@pnp/sp": "^2.3.0",
+    "office-ui-fabric-react": "6.214.0",
+    "react": "16.8.5",
+    "react-dom": "16.8.5"
   },
   "devDependencies": {
+    "@types/react": "16.8.8",
+    "@types/react-dom": "16.8.3",
     "@microsoft/sp-build-web": "1.11.0",
     "@microsoft/sp-tslint-rules": "1.11.0",
     "@microsoft/sp-module-interfaces": "1.11.0",

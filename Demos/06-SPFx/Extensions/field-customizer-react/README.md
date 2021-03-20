@@ -1,4 +1,4 @@
-# fld-customizer
+# field-customizer-react
 
 ## Summary
 
