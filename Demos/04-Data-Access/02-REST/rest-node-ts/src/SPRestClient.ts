@@ -49,6 +49,7 @@ export class SPRestClient {
       return `https://${cfg.spTenant}.sharepoint.com/_api`;
     }
   }
+
   async query(qry: string, log = false) {
     const token = await this.getToken();
     const httpResult = await fetch(`${this.baseUrl}/${qry}`, {
