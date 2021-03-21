@@ -1,17 +1,18 @@
 import * as Msal from "msal";
+import { MSALConfig } from "../config-model";
 
 export class SPRestClient {
   private msalApp: Msal.UserAgentApplication = null;
   private msalAcct: Msal.Account;
+  private baseUrl = "";
 
-  constructor(private tenant: string, config: any) {
-    this.msalApp = new Msal.UserAgentApplication(config);
+  constructor(private msalcfg: MSALConfig) {
+    this.msalApp = new Msal.UserAgentApplication(msalcfg);
+    this.baseUrl = this.getBaseUrl(msalcfg);
   }
 
   logInfo() {
-    console.log(
-      `SPRestClient - Version 1.0.0 working in Tenant ${this.tenant}`
-    );
+    console.log(`SPRestClient - Version 1.0.0 working in Tenant: ${this.msalcfg.spTenant} on Site:  ${this.msalcfg.site} `);
   }
 
   async logIn() {
@@ -36,15 +37,22 @@ export class SPRestClient {
 
   async getToken() {
     const spScopeV1 = {
-      scopes: [`https://${this.tenant}.sharepoint.com/.default`],
+      scopes: [`https://${this.msalcfg.spTenant}.sharepoint.com/.default`],
     };
     return await this.msalApp.acquireTokenSilent(spScopeV1);
   }
 
+  private getBaseUrl(cfg: MSALConfig): string {
+    if (this.msalcfg.site) {
+      return `https://${cfg.spTenant}.sharepoint.com/sites/${cfg.site}/_api`;
+    } else {
+      return `https://${cfg.spTenant}.sharepoint.com/_api`;
+    }
+  }
+
   async query(qry: string, log = false) {
-    const baseUrl = `https://${this.tenant}.sharepoint.com/_api`;
     const token = await this.getToken();
-    const httpResult = await fetch(`${baseUrl}/${qry}`, {
+    const httpResult = await fetch(`${this.baseUrl}/${qry}`, {
       headers: {
         Authorization: "Bearer " + token.accessToken,
         accept: "application/json;odata=verbose",
@@ -58,16 +66,14 @@ export class SPRestClient {
   }
 
   async createItem(listName: string) {
-    const baseUrl = `https://${this.tenant}.sharepoint.com/_api`;
     const qry = `lists/getByTitle('${listName}')/Items`;
     const token = await this.getToken();
-
     const item = JSON.stringify({
       __metadata: { type: "SP.List" },
       Title: "Task from REST",
     });
 
-    const result = await fetch(`${baseUrl}/${qry}`, {
+    const result = await fetch(`${this.baseUrl}/${qry}`, {
       method: "Post",
       body: item,
       headers: {
@@ -81,7 +87,6 @@ export class SPRestClient {
   }
 
   async createFolder(listName: string) {
-    const baseUrl = `https://${this.tenant}.sharepoint.com/_api`;
     const qry = `lists/getByTitle('${listName}')/Items`;
     const token = await this.getToken();
 
@@ -90,7 +95,7 @@ export class SPRestClient {
       Title: "Task from REST",
     });
 
-    const result = await fetch(`${baseUrl}/${qry}`, {
+    const result = await fetch(`${this.baseUrl}/${qry}`, {
       method: "Post",
       body: item,
       headers: {
@@ -104,7 +109,6 @@ export class SPRestClient {
   }
 
   async updateItem(listName: string, id: number, title: string) {
-    const baseUrl = `https://${this.tenant}.sharepoint.com/_api`;
     const qry = `lists/getByTitle('${listName}')/Items(${id})`;
     const token = await this.getToken();
 
@@ -113,7 +117,7 @@ export class SPRestClient {
       Title: title,
     });
 
-    const result = await fetch(`${baseUrl}/${qry}`, {
+    const result = await fetch(`${this.baseUrl}/${qry}`, {
       method: "POST",
       body: item,
       headers: {
@@ -128,11 +132,10 @@ export class SPRestClient {
   }
 
   async deleteItem(listName: string, id: number) {
-    const baseUrl = `https://${this.tenant}.sharepoint.com/_api`;
     const qry = `lists/getByTitle('${listName}')/Items(${id})`;
     const token = await this.getToken();
 
-    const result = await fetch(`${baseUrl}/${qry}`, {
+    const result = await fetch(`${this.baseUrl}/${qry}`, {
       method: "POST",
       headers: {
         Authorization: "Bearer " + token.accessToken,

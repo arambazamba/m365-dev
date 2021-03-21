@@ -1,9 +1,10 @@
 import { SPRestClient } from "./SPRestClient";
 
-(<any>window).runSample = runSample;
+// expose runSampleQueries to global namespace
+(<any>window).runSampleQueries = runSampleQueries;
 
-export async function runSample() {
-  const client = await authClient();
+export async function runSampleQueries() {
+  const client = await initClient();
 
   const title = await client.query("/web/title");
   console.log("Title of the web", title);
@@ -12,20 +13,14 @@ export async function runSample() {
   console.log("Lists of the web", lists);
 }
 
-(<any>window).authClient = authClient;
+// expose initClient to global namespace
+(<any>window).initClient = initClient;
 
-export async function authClient() {
-  const spTenant = "integrationsonline";
-  const config = {
-    auth: {
-      clientId: "024bf89c-83e1-45b5-8797-f013cf920cc5",
-      authority: "https://login.microsoftonline.com/common/",
-      redirectUri: "http://localhost:8080",
-    },
-  };
-
-  const client = new SPRestClient(spTenant, config);
-  (<any>window).spRest = client;
+export async function initClient() {
+  var cfg = await fetch("msal-config.json").then((response) => response.json());
+  const client = new SPRestClient(cfg);
+  // expose SPRestClient to global namespace
+  (<any>window).sprest = client;
   client.logInfo();
   await client.logIn();
   return client;
