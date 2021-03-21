@@ -15,8 +15,16 @@ export async function runSample() {
 (<any>window).authClient = authClient;
 
 export async function authClient() {
-  var cfg = await fetch("msal-config.json").then((response) => response.json());
-  const client = new SPRestClient(cfg);
+  const config = {
+    auth: {
+      clientId: "024bf89c-83e1-45b5-8797-f013cf920cc5",
+      authority: "https://login.microsoftonline.com/common/",
+      redirectUri: "http://localhost:8080",
+    },
+    spTenant: "integrationsonline",
+  };
+
+  const client = new SPRestClient(config);
   (<any>window).spRest = client;
   client.logInfo();
   await client.logIn();
