@@ -42,14 +42,13 @@ export class SPRestClient {
     return await this.msalApp.acquireTokenSilent(spScopeV1);
   }
 
-  getBaseUrl(cfg: MSALConfig): string {
+  private getBaseUrl(cfg: MSALConfig): string {
     if (this.msalcfg.site) {
       return `https://${cfg.spTenant}.sharepoint.com/sites/${cfg.site}/_api`;
     } else {
       return `https://${cfg.spTenant}.sharepoint.com/_api`;
     }
   }
-
   async query(qry: string, log = false) {
     const token = await this.getToken();
     const httpResult = await fetch(`${this.baseUrl}/${qry}`, {
