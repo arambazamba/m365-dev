@@ -48,15 +48,16 @@
 - Understanding & Using Flexbox
 - Introduction to Fluid UI
 
-## Introduction to React and using SPA Frameworks in M365 Development
+## Introduction to React for M365 Development
 
 - Introduction to React
 - Use Cases for React in SharePoint Development
 - Understanding React Basics in a Standalone App
+- Classes vs Functions
+- React CRUD (Create - Read - Update - Delete)
 - Using Context to share Data between Components
 - Using Fluid UI React Controls
 - Introduction to React Testing using Jest
-- Using Angular as Microsoft 365 External SPA
 
 ## SharePoint Framework Basics (SPFx)
 
@@ -74,12 +75,15 @@
 - Office Add-In Introduction
 - Scaffolding & Implementing an Outlook React Add-In
 
-## Provisioning & Microsoft 365 DevOps
+## Microsoft 365 Provisioning & DevOps
 
 - Introduction to SharePoint & Teams Provisioning
+- Provisioning SharePoint Sites using Site Scripts
+- Using Microsoft 365 CLI
+- Azure DevOps Quickstart
 - Deployment Options for SPFx, Teams & Single Page Applications
-- Introduction to DevOps using Microsoft 365 CLI
-- Building & Deploying a SPFx Teams Tab using Azure DevOps
+- Building & Deploying SharePoint Framework (SPFx) Extensions
+- Building & Deploying Teams Apps
 
 ## No-Code-Solutions using Microsoft Power Platform
 
