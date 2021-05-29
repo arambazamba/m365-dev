@@ -32,7 +32,7 @@
 
 ## Microsoft 365 & SharePoint Data Access
 
-- CSOM vs REST vs PnP Core JavaScript
+- REST vs PnP Core vs PnP/PnPjs
 - REST and OData Overview
 - OData Queries and Expanding
 - Implementing CRUD Operation using REST for List & List Items
