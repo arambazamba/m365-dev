@@ -81,7 +81,7 @@
 -   Using the PnP Framework for Provisioning
 -   Provisioning SharePoint Sites using Site Scripts
 -   Using the Microsoft 365 CLI
--   Azure DevOps Quickstart
+-   Azure DevOps Pipelines Quickstart
 -   Deployment Options for SPFx, Teams & Single Page Applications
 -   Building & Deploying SharePoint Framework (SPFx) Extensions
 -   Building & Deploying Teams Apps
