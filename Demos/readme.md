@@ -35,6 +35,7 @@
 -   Implementing CRUD Operation using REST for List & List Items
 -   OData Queries and Expanding
 -   Introduction to PnP Core SDK for .NET
+-   .NET Core Quickstart
 -   Implementing CRUD Operations for Lists & List Items using .Net Core
 -   Expanding Complex Objects like Managed Metadata, Lookups, User
 -   PnP/PnPjs Overview & CRUD Operations
