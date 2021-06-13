@@ -77,8 +77,8 @@
 
 ## Microsoft 365 Provisioning & DevOps
 
--   Introduction to SharePoint & Teams Provisioning
--   Using the PnP Framework
+-   Microsoft 365 Provisioning & DevOp Overview
+-   Using the PnP Framework for Provisioning
 -   Provisioning SharePoint Sites using Site Scripts
 -   Using the Microsoft 365 CLI
 -   Azure DevOps Quickstart
