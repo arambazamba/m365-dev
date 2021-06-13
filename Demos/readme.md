@@ -9,7 +9,7 @@
 
 ## Node-based Development using Visual Studio Code
 
--   Using Visual Studio Code, Extensions, Add-Ins
+-   Using Visual Studio Code, Extensions & Quickwins
 -   Understanding Node.js Role in modern Client Side Dev
 -   The Web Stack Pattern, Node, Gulp, Yeoman, Webpack
 -   Using Node Express
