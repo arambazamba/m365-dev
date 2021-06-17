@@ -54,11 +54,19 @@
 -   Introduction to React
 -   Use Cases for React in SharePoint Development
 -   Understanding React Basics in a Standalone App
--   Classes vs Hooks
+-   Classes vs Functional Components
+-   Using React Hooks
 -   React CRUD (Create - Read - Update - Delete)
 -   Using Context to share Data between Components
 -   Using Fluid UI React Controls
 -   Introduction to React Testing using Jest
+
+## Indroduction to .Net Core
+
+- .Net Core Overview
+- Dependency Injection and Configuration
+- Implementing API Controllers
+- M365 related Libraries for .Net Core
 
 ## SharePoint Framework Basics (SPFx)
 
