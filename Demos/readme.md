@@ -16,11 +16,22 @@
 
 ## Object Oriented JavaScript & Type Script
 
--   Visual Studio Extensions & Project Configurations
 -   JavaScript vs TypeScript
--   Types, Enums Classes, Interfaces, Functions
 -   ES6 Array Helpers & Utility Functions
--   Async Programming & Promises
+-   Async Programming: Promises & Async Await
+
+## Introduction to React for M365 Development
+
+-   Introduction to React
+-   Use Cases for React in SharePoint Development
+-   Understanding React Basics in a Standalone App
+-   Classes vs Functional Components & Hooks
+-   React CRUD (Create - Read - Update - Delete)
+-   Using Context to share Data between Components
+-   Understanding & Using Flexbox and CSS Grid
+-   Using Fluid UI React Controls
+-   Introduction to React Testing using Jest
+-   Introduction to React Routing 
 
 ## Introduction to Microsoft Identity
 
@@ -30,35 +41,40 @@
 
 ## Microsoft 365 & SharePoint Data Access
 
+-   Introduction to SharePoint Object Hierarchy
 -   PnP Core SDK vs REST vs PnP JavaScript
 -   SharePoint REST Api V1 & V2 Getting Started
 -   Implementing CRUD Operation using REST for List & List Items
 -   OData Queries and Expanding
+-   PnP/PnPjs Overview & CRUD Operations
 -   Introduction to PnP Core SDK for .NET
 -   .NET Core Quickstart
--   Implementing CRUD Operations for Lists & List Items using .Net Core
+-   Implementing CRUD Operations for Lists & List Items using PnP Core SDK
 -   Expanding Complex Objects like Managed Metadata, Lookups, User
--   PnP/PnPjs Overview & CRUD Operations
--   Microsoft Graph & Webhooks Getting Started
--   Implementing Remote Event Receivers
+
+## Introduction to Microsoft Graph & Graph Toolkit
+
+-  Introduction to Microsoft Graph
+-  Managing Events, Calender, Mail using Graph
+-  Using Graph's SharePoint Rest Api V2
+-  Introduction to the MS Graph Toolkit
+
+## Azure Hosted Apps, Remote Event Handling & Remote Timer Jobs
+
+-   Introduction to Azure App Services
+-   Implementing External Apps using React and MS Graph Toolkit
+-   SharePoint Remote Event Handling Patterns
+-   Introduction to Azure Functions
+-   SharePoint Webhooks using Azure Functions
+-   Implementing Remote Event Receivers using Azure Functions
+-   Collecting SharePoint List Notifications using Azure Event Grid
 
 ## Customizing & Enhancing the User-Interface
 
 -   Customize Modern UI & Modern Themes
--   Understanding & Using Flexbox
--   Introduction to Fluid UI
+-   Site Designs
 -   List & View Formatting
-
-## Introduction to React for M365 Development
-
--   Introduction to React
--   Use Cases for React in SharePoint Development
--   Understanding React Basics in a Standalone App
--   Classes vs Hooks
--   React CRUD (Create - Read - Update - Delete)
--   Using Context to share Data between Components
--   Using Fluid UI React Controls
--   Introduction to React Testing using Jest
+-   Using Site Scripts
 
 ## SharePoint Framework Basics (SPFx)
 
@@ -68,24 +84,27 @@
 -   Exposing Properties & Data Access
 -   Introduction to SharePoint Framework Extension
 
-## Teams & Office Add-In Basics
+## SharePoint Site Provisioning 
+
+-   Using the PnP Framework for Provisioning
+-   Provisioning SharePoint Sites using Site Designs & Scripts
+
+## Microsoft 365 DevOps
+
+-   Microsoft 365 DevOp Overview
+-   Using the Microsoft 365 CLI
+-   Azure DevOps Pipelines Quickstart
+-   Introduction to Yaml
+-   Deployment Options for SPFx & Azure Hosted SharePoint Apps
+-   Building & Deploying SharePoint Framework (SPFx) Extensions
+-   Building & Deploying Teams Azure Hosted SharePoint Apps
+-   Building & Deploying Azure Functions
+
+## Introduction to Teams Development
 
 -   Microsoft Teams Introduction
 -   Overview Teams Extension Options
--   SPFx & External SPAs as Teams Tabs
--   Office Add-In Introduction
--   Scaffolding & Implementing an Outlook React Add-In
-
-## Microsoft 365 Provisioning & DevOps
-
--   Microsoft 365 Provisioning & DevOp Overview
--   Using the PnP Framework for Provisioning
--   Provisioning SharePoint Sites using Site Scripts
--   Using the Microsoft 365 CLI
--   Azure DevOps Pipelines Quickstart
--   Deployment Options for SPFx, Teams & Single Page Applications
--   Building & Deploying SharePoint Framework (SPFx) Extensions
--   Building & Deploying Teams Apps
+-   Introduction to Microsoft Teams Toolkit v2
 
 ## No-Code-Solutions using Microsoft Power Platform
 
