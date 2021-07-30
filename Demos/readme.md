@@ -76,6 +76,13 @@
 -   List & View Formatting
 -   Using Site Scripts
 
+## Indroduction to .Net Core
+
+- .Net Core Overview
+- Dependency Injection and Configuration
+- Implementing API Controllers
+- M365 related Libraries for .Net Core
+
 ## SharePoint Framework Basics (SPFx)
 
 -   SharePoint Framework SPFx Overview
