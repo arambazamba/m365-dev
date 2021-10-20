@@ -9,15 +9,12 @@ export interface GreetingProps {
 export class Greeting extends React.Component<GreetingProps, any> {
 	constructor(props: GreetingProps) {
 		super(props);
-		this.state = {
-			user: this.props.user
-		};
 	}
 
 	render() {
 		return (
 			<div>
-				<h2>Hello, {this.formatName(this.state.user)}</h2>
+				<h2>Hello, {this.formatName(this.props.user)}</h2>
 			</div>
 		);
 	}

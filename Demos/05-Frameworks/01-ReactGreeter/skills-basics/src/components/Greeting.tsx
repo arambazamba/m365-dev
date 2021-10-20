@@ -16,7 +16,7 @@ export class Greeting extends React.Component<any, any> {
 	}
 
 	formatName(user: any) {
-		return user.firstName + ' ' + user.lastName;
+		return `${user.firstName} ${user.lastName}`;
 	}
 }
 
