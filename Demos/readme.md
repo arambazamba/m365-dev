@@ -25,7 +25,10 @@
 -   Introduction to React
 -   Use Cases for React in SharePoint Development
 -   Understanding React Basics in a Standalone App
--   Classes vs Functional Components & Hooks
+-   Classes vs Functional Components
+-   Implementing Class based Components
+-   Implementing Functional Components
+-   Using Hooks: useState, useEffect, useCallback
 -   React CRUD (Create - Read - Update - Delete)
 -   Using Context to share Data between Components
 -   Understanding & Using Flexbox and CSS Grid
