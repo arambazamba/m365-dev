@@ -37,7 +37,6 @@
 -   Understanding & Using Flexbox and CSS Grid
 -   Using Fluid UI React Controls
 -   Introduction to React Testing using Jest
--   Introduction to React Routing 
 
 ## Introduction to Microsoft Identity
 
