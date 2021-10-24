@@ -12,7 +12,7 @@
 -   Using Visual Studio Code, Extensions & Quickwins
 -   Understanding Node.js Role in modern Client Side Dev
 -   The Web Stack Pattern, Node, Gulp, Yeoman, Webpack
--   Using Node Express
+-   Implementing Api's using Node Express
 
 ## Object Oriented JavaScript & Type Script
 
