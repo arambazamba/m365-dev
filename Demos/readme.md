@@ -17,8 +17,11 @@
 ## Object Oriented JavaScript & Type Script
 
 -   JavaScript vs TypeScript
--   ES6 Array Helpers & Utility Functions
--   Async Programming: Promises & Async Await
+-   Object Orientation, Classes, Constructor Functions 
+-   Immutability, Pure Functions and Object Cloning
+-   ES6 Array Helpers & Utility Functions (Destructuring assignments, Spread, ...)
+-   REST, Http Verbs, fetch and axios
+-   Promises & Async Await
 
 ## Introduction to React for M365 Development
 
