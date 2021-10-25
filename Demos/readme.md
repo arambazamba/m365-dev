@@ -100,6 +100,7 @@
 
 -   Microsoft Teams Introduction
 -   Overview Teams Extension Options
+-   Using Graph's SharePoint Rest Api V2
 -   Introduction to Microsoft Teams Toolkit v2
 
 ## SharePoint Site Provisioning 
