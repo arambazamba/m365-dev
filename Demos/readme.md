@@ -3,7 +3,7 @@
 ## Introduction Microsoft 365 Development
 
 -   Microsoft 365 Overview & Services
--   Overview M365 Extension & Data Access Paterns
+-   Overview M365 Extension & Data Access Patterns
 -   Why Client-Side Development (JavaScript / Typescript vs C# Customizations)
 -   Overview PnP Framework
 
@@ -53,14 +53,14 @@
 -   OData Queries and Expanding
 -   PnP/PnPjs Overview & CRUD Operations
 -   Introduction to PnP Core SDK for .NET
--   .NET Core Quickstart
+-   .NET Core QuickStart
 -   Implementing CRUD Operations for Lists & List Items using PnP Core SDK
 -   Expanding Complex Objects like Managed Metadata, Lookups, User
 
 ## Introduction to Microsoft Graph & Graph Toolkit
 
 -  Introduction to Microsoft Graph
--  Managing Events, Calender, Mail using Graph
+-  Managing Events, Calendar, Mail using Graph
 -  Using Graph's SharePoint Rest Api V2
 -  Introduction to the MS Graph Toolkit
 
@@ -93,8 +93,14 @@
 -   SharePoint Framework SPFx Overview
 -   When to use SPFx / When to use other Patterns
 -   Implementing SharePoint Framework Web Parts
--   Exposing Properties & Data Access
+-   SharePoint Framework Data Acsess using REST ans PnPJS
 -   Introduction to SharePoint Framework Extension
+
+## Introduction to Teams Development
+
+-   Microsoft Teams Introduction
+-   Overview Teams Extension Options
+-   Introduction to Microsoft Teams Toolkit v2
 
 ## SharePoint Site Provisioning 
 
@@ -103,7 +109,7 @@
 
 ## Microsoft 365 DevOps
 
--   Microsoft 365 DevOp Overview
+-   Microsoft 365 DevOps Overview
 -   Using the Microsoft 365 CLI
 -   Azure DevOps Pipelines Quickstart
 -   Introduction to Yaml
@@ -111,12 +117,6 @@
 -   Building & Deploying SharePoint Framework (SPFx) Extensions
 -   Building & Deploying Teams Azure Hosted SharePoint Apps
 -   Building & Deploying Azure Functions
-
-## Introduction to Teams Development
-
--   Microsoft Teams Introduction
--   Overview Teams Extension Options
--   Introduction to Microsoft Teams Toolkit v2
 
 ## No-Code-Solutions using Microsoft Power Platform
 
