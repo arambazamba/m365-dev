@@ -53,7 +53,6 @@
 -   OData Queries and Expanding
 -   PnP/PnPjs Overview & CRUD Operations
 -   Introduction to PnP Core SDK for .NET
--   .NET Core QuickStart
 -   Implementing CRUD Operations for Lists & List Items using PnP Core SDK
 -   Expanding Complex Objects like Managed Metadata, Lookups, User
 
@@ -66,13 +65,12 @@
 
 ## Azure Hosted Apps, Remote Event Handling & Remote Timer Jobs
 
--   Introduction to Azure App Services
+-   Introduction to Azure App Services & Azure Functions
 -   Implementing External Apps using React and MS Graph Toolkit
--   SharePoint Remote Event Handling Patterns
--   Introduction to Azure Functions
--   SharePoint Webhooks using Azure Functions
--   Implementing Remote Event Receivers using Azure Functions
+-   SharePoint Remote Event Handling Options
+-   Implementing Remote Event Handling & Webhooks using Azure Functions
 -   Collecting SharePoint List Notifications using Azure Event Grid
+-   Timer Jobs using Azure Functions
 
 ## Customizing & Enhancing the User-Interface
 
@@ -96,13 +94,6 @@
 -   SharePoint Framework Data Acsess using REST ans PnPJS
 -   Introduction to SharePoint Framework Extension
 
-## Introduction to Teams Development
-
--   Microsoft Teams Introduction
--   Overview Teams Extension Options
--   Using Graph's SharePoint Rest Api V2
--   Introduction to Microsoft Teams Toolkit v2
-
 ## SharePoint Site Provisioning 
 
 -   Using the PnP Framework for Provisioning
@@ -118,9 +109,3 @@
 -   Building & Deploying SharePoint Framework (SPFx) Extensions
 -   Building & Deploying Teams Azure Hosted SharePoint Apps
 -   Building & Deploying Azure Functions
-
-## No-Code-Solutions using Microsoft Power Platform
-
--   The Power Platform
--   Introduction to Microsoft Power Apps
--   Introduction to Microsoft Flow
