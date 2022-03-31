@@ -3,7 +3,7 @@
 ## Introduction Microsoft 365 Development
 
 -   Microsoft 365 Overview & Services
--   Overview M365 Extension & Data Access Patterns
+-   Overview Microsoft 365 Apps & Extension Patterns
 -   Overview PnP Framework
 
 ## Node-based Development using Visual Studio Code
@@ -11,7 +11,7 @@
 -   Using Visual Studio Code, Extensions & Quickwins
 -   Understanding Node.js Role in modern Client Side Dev
 -   The Web Stack Pattern, Node, Gulp, Yeoman, Webpack
--   Implementing Api's using Node Express
+-   Exposing Local Apps using ngrok
 
 ## Object Oriented JavaScript & Type Script
 
@@ -33,14 +33,14 @@
 -   Using Hooks: useState, useEffect, useCallback
 -   React CRUD (Create - Read - Update - Delete)
 -   Using Context to share Data between Components
--   Understanding & Using Flexbox and CSS Grid
 -   Using Fluid UI React Controls
 -   Introduction to React Testing using Jest
 
-## Introduction to Microsoft Identity
+## Using Microsoft Identity 
 
 -   Introduction to Microsoft Identity
 -   App Registrations
+-   Token Based Authentication 
 -   Microsoft Authentication Library - MSAL Getting Started
 
 ## Microsoft 365 & SharePoint Data Access
