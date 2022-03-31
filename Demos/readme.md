@@ -4,7 +4,6 @@
 
 -   Microsoft 365 Overview & Services
 -   Overview M365 Extension & Data Access Patterns
--   Why Client-Side Development (JavaScript / Typescript vs C# Customizations)
 -   Overview PnP Framework
 
 ## Node-based Development using Visual Studio Code
@@ -63,7 +62,7 @@
 -  Using Graph's SharePoint Rest Api V2
 -  Introduction to the MS Graph Toolkit
 
-## Azure Hosted Apps, Remote Event Handling & Remote Timer Jobs
+## Using AppServices and Azure Functions in Microsoft 365 Development
 
 -   Introduction to Azure App Services & Azure Functions
 -   Implementing External Apps using React and MS Graph Toolkit
