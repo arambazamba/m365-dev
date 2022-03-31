@@ -79,13 +79,6 @@
 -   List & View Formatting
 -   Using Site Scripts
 
-## Indroduction to .Net Core
-
-- .Net Core Overview
-- Dependency Injection and Configuration
-- Implementing API Controllers
-- M365 related Libraries for .Net Core
-
 ## SharePoint Framework Basics (SPFx)
 
 -   SharePoint Framework SPFx Overview
@@ -107,5 +100,4 @@
 -   Introduction to Yaml
 -   Deployment Options for SPFx & Azure Hosted SharePoint Apps
 -   Building & Deploying SharePoint Framework (SPFx) Extensions
--   Building & Deploying Teams Azure Hosted SharePoint Apps
 -   Building & Deploying Azure Functions
