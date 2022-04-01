@@ -1,4 +1,4 @@
-# Microsoft 365 - Client Side Development Fundamentals
+# Microsoft 365 - Cloud Development Fundamentals
 
 Companion Material for skills update & preperation to attend MS-600 by [Alexander Pajer](https://www.integrations.at/kontakt.aspx)
 
