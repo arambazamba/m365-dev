@@ -76,7 +76,6 @@
 -   Customize Modern UI & Modern Themes
 -   Site Designs
 -   List & View Formatting
--   Using Site Scripts
 
 ## SharePoint Framework Basics (SPFx)
 
