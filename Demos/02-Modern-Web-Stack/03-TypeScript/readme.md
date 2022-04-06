@@ -1,24 +1,15 @@
-# Server Side Solutions (WSP) & TypeScript
+# TypeScript
 
-[Typescript Documentation](https://www.typescriptlang.org/docs/home.html)
+[Typescript Documentation](https://www.typescriptlang.org/)
 
-## Add TypeScript Support in Visual Studio Professional & Related NuGetPackages
-
-![NuGet](_images/nuget.png)
-
-## Enable Sourcemap Deploy
-
-- Unload project
-- Add this to the end of \*.csproj
+## Demos
 
 ```
-<Target Name="AddTsToContent" AfterTargets="CompileTypeScript" Condition="'$(BuildingProject)' != 'false'">
-  <ItemGroup>
-      <Content Include="@(TypeScriptCompile)" Condition="'$(Configuration)'=='Debug'" />
-  </ItemGroup>
-</Target>
+nvm install 14.18.0
+nvm use 14.18.0
+npm i -g webpack@5.60.0 webpack-cli@4.9.1 gulp@4.0.2 http-server@14.0.0 
 ```
 
-- Reload project to see TypeScript Build Tab
+## Labs
 
-![tsbuild](_images/tsbuild.png)
+[Build JavaScript applications using TypeScript](https://docs.microsoft.com/en-us/learn/paths/build-javascript-applications-typescript/)

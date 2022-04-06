@@ -22,17 +22,3 @@ Install PnP Powershell
 Install-Module -Name PowerShellGet –Force
 Install-Module SharePointPnPPowerShellOnline
 ```
-
-### Other Microsoft 365 Related PowerShell Providers
-
-[Microsoft Online Services Sign-In Assistant for IT Professionals](https://www.microsoft.com/en-us/download/details.aspx?id=28177)
-
-[Install Requirements](https://docs.microsoft.com/en-us/Microsoft365/enterprise/powershell/connect-to-Microsoft-365-powershell)
-
-[SharePoint Online PowerShell Documentation](https://docs.microsoft.com/en-us/powershell/module/sharepoint-online/?view=sharepoint-ps)
-
-[Install Windows Management Framework 4.0](https://www.microsoft.com/en-us/download/details.aspx?id=40855)
-
-[AzureAD Powershell Documentation](https://docs.microsoft.com/en-gb/powershell/module/Azuread/?view=azureadps-2.0)
-
-[Microsoft 365 Powershell Documentation](https://docs.microsoft.com/en-us/Microsoft365/enterprise/powershell/connect-to-Microsoft-365-powershell)

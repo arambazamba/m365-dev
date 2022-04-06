@@ -1,0 +1,12 @@
+### Get all food
+GET http://localhost:3000/food
+Accept: application/json
+
+### Add food
+POST http://localhost:3000/food
+Accept: application/json
+Content-Type: application/json
+
+{
+    "name": "Sauerkraut"
+}

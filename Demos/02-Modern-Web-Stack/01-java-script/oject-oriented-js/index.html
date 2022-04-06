@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Modern JavaScript</title>
+    <link href="lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <link href="css/demo.css" rel="stylesheet" />
+    <script src="lib/jquery/dist/jquery.js"></script>
+    <script src="lib/moment/moment.js"></script>
+    <script src="lib/lodash/dist/lodash.min.js"></script>
+    <script src="lib/ramda/dist/ramda.min.js"></script>
+    <script src="index.js"></script>
+  </head>
+
+  <body>
+    <div id="demoContainer" class="container-fluid">
+      <div class="row">
+        <header class="header" md->
+          <h3>Advanced Web Technologies - JavaScript - Demos</h3>
+          <br />
+        </header>
+      </div>
+      <div class="row">
+        <div class="demoMenu col-xs-3">
+          <div id="status">Class Topics - Please choose:</div>          
+          <a onclick="loadDemo('demos/objectOrientation.html', this, true)"
+            >Objects</a
+          >
+          <a onclick="loadDemo('demos/es6classes.html', this, true)">Classes</a>
+          <a onclick="loadDemo('demos/es6lang.html', this, true)">ES 6 Language</a>
+
+
+          <a onclick="loadDemo('demos/async.html', this, true)"
+            >Async Operations</a
+          >
+          <a onclick="loadDemo('demos/functional.html', this, true)"
+            >Functional Programming</a
+          >          
+          <div id="status">JS Basics</div> 
+          <a onclick="loadDemo('demos/variables.html', this, true)"
+            >Variables</a
+          >
+          <a onclick="loadDemo('demos/logic.html', this, true)">Logic</a>
+          <a onclick="loadDemo('demos/dates.html', this, true)">Dates</a>
+          <a onclick="loadDemo('demos/dates.html', this, true)">Dates</a>
+          <a onclick="loadDemo('demos/selecting.html', this, true)"
+            >Selectors</a
+          >
+          <a onclick="loadDemo('demos/domevents.html', this, true)"
+            >DOM Events</a
+          >
+          <a onclick="loadDemo('demos/mainpulate.html', this, true)"
+            >Manipulate DOM</a
+          >
+          
+          <a onclick="loadDemo('demos/shadowdom.html', this, true)"
+            >Shadow Dom</a
+          >
+          <a onclick="loadDemo('demos/webcomponents.html', this, true)"
+            >Web Component</a
+          >
+          <a onclick="loadDemo('demos/modules.html', this, true)"
+            >Modules</a
+          >
+        </div>
+        <div class="workbench col-xs-8 col-xs-offset-1"></div>
+      </div>
+    </div>
+  </body>
+</html>
