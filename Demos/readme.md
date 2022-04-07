@@ -99,3 +99,11 @@
 -   Deployment Options for SPFx & Azure Hosted SharePoint Apps
 -   Building & Deploying SharePoint Framework (SPFx) Extensions
 -   Building & Deploying Azure Functions
+
+---
+
+## Older Modules for reference only
+
+### Intro to Teams Development
+
+### Introduction to the Power Platform
