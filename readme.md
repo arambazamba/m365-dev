@@ -12,8 +12,6 @@ Companion Material for skills update & preperation to attend MS-600 by [Alexande
 - [Guided Scripts to setup an Azure hosted Development & Lab VM](./Setup)
   - [Base Dev Environment Setup inkluding Visual Studio Code Extensions](./Setup/#basics)
   - [Setup Windows Subsystem for Linux 2 - WSL2](./Setup/#wsl)
-  - [Setup Docker & Kubernetes](./Setup/#docker-wsl)
-  - [Use Teams in VM](./Setup/#teams)
 - [Labs](./Labs)
 
 ## Required Cloud Ressources

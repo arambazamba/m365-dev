@@ -1,0 +1,9 @@
+{
+  "generator-teams": {
+    "promptValues": {
+      "developer": "Integrations"
+    },
+    "libraryName": "basicTeamsTab",
+    "generator-version": "3.5.0"
+  }
+}

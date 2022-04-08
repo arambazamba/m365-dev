@@ -1,6 +1,4 @@
-# Introduction
-
-## Microsoft 365
+# Introduction to Microsoft 365
 
 [Hub Sites](https://docs.microsoft.com/en-us/sharepoint/dev/features/hub-site/hub-site-overview)
 
