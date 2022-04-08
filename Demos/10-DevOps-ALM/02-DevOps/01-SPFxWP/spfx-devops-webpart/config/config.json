@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "sp-fx-dev-ops-wp-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/spFxDevOpsWp/SpFxDevOpsWpWebPart.js",
+          "manifest": "./src/webparts/spFxDevOpsWp/SpFxDevOpsWpWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "SpFxDevOpsWpWebPartStrings": "lib/webparts/spFxDevOpsWp/loc/{locale}.js"
+  }
+}
