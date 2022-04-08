@@ -1,0 +1,49 @@
+name: spfx-build-deploy
+
+trigger:
+  branches:
+    include:
+      - master
+  paths:
+    include:
+      - "*"
+    exclude:
+      - az-pipelines/*
+      - _images/*
+
+variables:
+  sppkg: spfx-devops.sppkg
+  nodeVersion: "14.x"
+  # set runtime vars: username, password
+
+pool:
+  vmImage: "ubuntu-20.04"
+
+stages:
+  - stage: Build
+    jobs:
+      - job: BuildJob
+        displayName: Build SPFx
+        steps:
+          - template: templates/spfx-build.yaml
+            parameters:
+              nodeVersion: $(nodeVersion)
+              pkg: $(sppkg)
+
+  - stage: Deploy
+    displayName: Deploy to M365
+    dependsOn: Build
+    jobs:
+      - deployment: DeployM365
+        displayName: Deploy to M365
+        environment: M365Prod
+        strategy:
+          runOnce:
+            deploy:
+              steps:            
+                - template: templates/spfx-deploy-cli.yaml
+                  parameters:
+                    nodeVersion: $(nodeVersion)
+                    pkg: $(sppkg)
+                    username: $(username)
+                    password: $(password)

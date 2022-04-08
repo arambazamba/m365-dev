@@ -1,0 +1,45 @@
+parameters:
+  - name: nodeVersion
+    type: string
+    default: "12.x"
+
+  - name: pkg
+    type: string
+    default: "drop"
+
+steps:
+  - task: NodeTool@0
+    displayName: "Use Node ${{ parameters.nodeVersion }}"
+    inputs:
+      versionSpec: "${{ parameters.nodeVersion }}"
+    
+  - task: CmdLine@2
+    displayName: npm install
+    inputs:
+          script: "npm install"
+
+  - task: gulp@1
+    displayName: "gulp bundel"
+    inputs:
+      gulpFile: "gulpfile.js"
+      targets: "bundle"
+      arguments: "--ship"
+      enableCodeCoverage: false
+
+  - task: gulp@1
+    displayName: "gulp package solution"
+    inputs:
+      gulpFile: "gulpfile.js"
+      targets: "package-solution"
+      arguments: "--ship"
+
+  - task: CopyFiles@2
+    displayName: "Copy Files to: $(build.artifactstagingdirectory)/${{ parameters.pkg }}"
+    inputs:
+      Contents: "sharepoint/solution/*.sppkg"
+      TargetFolder: "$(build.artifactstagingdirectory)/${{ parameters.pkg }}"
+
+  - task: PublishBuildArtifacts@1
+    displayName: "Publish artifacts: ${{ parameters.pkg }}"
+    inputs:
+        PathtoPublish: "$(Build.ArtifactStagingDirectory)/${{ parameters.pkg }}"    

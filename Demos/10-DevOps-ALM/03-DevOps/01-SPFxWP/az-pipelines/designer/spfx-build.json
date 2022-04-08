@@ -1,0 +1,228 @@
+{
+    "options": [
+        {
+            "enabled": false,
+            "definition": { "id": "5d58cc01-7c75-450c-be18-a388ddb129ec" },
+            "inputs": { "branchFilters": "[\"+refs/heads/*\"]", "additionalFields": "{}" }
+        },
+        {
+            "enabled": false,
+            "definition": { "id": "a9db38f9-9fdc-478c-b0f9-464221e58316" },
+            "inputs": { "workItemType": "Issue", "assignToRequestor": "true", "additionalFields": "{}" }
+        }
+    ],
+    "triggers": [
+        { "branchFilters": ["+main"], "pathFilters": [], "batchChanges": false, "maxConcurrentBuildsPerBranch": 1, "pollingInterval": 0, "triggerType": 2 }
+    ],
+    "variables": { "system.debug": { "value": "false", "allowOverride": true }, "pkgname": { "value": "devops-wp.sppkg" } },
+    "properties": {},
+    "tags": [],
+    "_links": {
+        "self": { "href": "https://dev.azure.com/integrationstraining/05fd8454-e6fb-4f07-86a0-23dd76609962/_apis/build/Definitions/70?revision=4" },
+        "web": { "href": "https://dev.azure.com/integrationstraining/05fd8454-e6fb-4f07-86a0-23dd76609962/_build/definition?definitionId=70" },
+        "editor": { "href": "https://dev.azure.com/integrationstraining/05fd8454-e6fb-4f07-86a0-23dd76609962/_build/designer?id=70&_a=edit-build-definition" },
+        "badge": { "href": "https://dev.azure.com/integrationstraining/05fd8454-e6fb-4f07-86a0-23dd76609962/_apis/build/status/70" }
+    },
+    "jobAuthorizationScope": 1,
+    "jobTimeoutInMinutes": 60,
+    "jobCancelTimeoutInMinutes": 5,
+    "badgeEnabled": true,
+    "process": {
+        "phases": [
+            {
+                "steps": [
+                    {
+                        "environment": {},
+                        "enabled": true,
+                        "continueOnError": false,
+                        "alwaysRun": false,
+                        "displayName": "Use Node 12.x",
+                        "timeoutInMinutes": 0,
+                        "condition": "succeeded()",
+                        "task": { "id": "31c75bbb-bcdf-4706-8d7c-4da6a1959bc2", "versionSpec": "0.*", "definitionType": "task" },
+                        "inputs": { "versionSpec": "12.x", "checkLatest": "true", "force32bit": "false" }
+                    },
+                    {
+                        "environment": {},
+                        "enabled": true,
+                        "continueOnError": false,
+                        "alwaysRun": false,
+                        "displayName": "npm install",
+                        "timeoutInMinutes": 0,
+                        "condition": "succeeded()",
+                        "task": { "id": "fe47e961-9fa8-4106-8639-368c022d43ad", "versionSpec": "1.*", "definitionType": "task" },
+                        "inputs": {
+                            "command": "install",
+                            "workingDir": "",
+                            "verbose": "false",
+                            "customCommand": "",
+                            "customRegistry": "useNpmrc",
+                            "customFeed": "",
+                            "customEndpoint": "",
+                            "publishRegistry": "useExternalRegistry",
+                            "publishFeed": "",
+                            "publishPackageMetadata": "true",
+                            "publishEndpoint": ""
+                        }
+                    },
+                    {
+                        "environment": {},
+                        "enabled": true,
+                        "continueOnError": false,
+                        "alwaysRun": false,
+                        "displayName": "gulp bundle",
+                        "timeoutInMinutes": 0,
+                        "condition": "succeeded()",
+                        "task": { "id": "b82cfbe4-34f9-40f5-889e-c8842ca9dd9d", "versionSpec": "0.*", "definitionType": "task" },
+                        "inputs": {
+                            "gulpFile": "gulpfile.js",
+                            "targets": "bundle",
+                            "arguments": "--ship",
+                            "cwd": "",
+                            "gulpjs": "node_modules/gulp/bin/gulp.js",
+                            "publishJUnitResults": "false",
+                            "testResultsFiles": "**/TEST-*.xml",
+                            "testRunTitle": "",
+                            "enableCodeCoverage": "false",
+                            "testFramework": "Mocha",
+                            "srcFiles": "",
+                            "testFiles": "test/*.js"
+                        }
+                    },
+                    {
+                        "environment": {},
+                        "enabled": true,
+                        "continueOnError": false,
+                        "alwaysRun": false,
+                        "displayName": "gulp package-solution",
+                        "timeoutInMinutes": 0,
+                        "condition": "succeeded()",
+                        "task": { "id": "b82cfbe4-34f9-40f5-889e-c8842ca9dd9d", "versionSpec": "0.*", "definitionType": "task" },
+                        "inputs": {
+                            "gulpFile": "gulpfile.js",
+                            "targets": "package-solution",
+                            "arguments": "--ship",
+                            "cwd": "",
+                            "gulpjs": "node_modules/gulp/bin/gulp.js",
+                            "publishJUnitResults": "false",
+                            "testResultsFiles": "**/TEST-*.xml",
+                            "testRunTitle": "",
+                            "enableCodeCoverage": "false",
+                            "testFramework": "Mocha",
+                            "srcFiles": "",
+                            "testFiles": "test/*.js"
+                        }
+                    },
+                    {
+                        "environment": {},
+                        "enabled": true,
+                        "continueOnError": false,
+                        "alwaysRun": false,
+                        "displayName": "Publish Artifact: drop",
+                        "timeoutInMinutes": 0,
+                        "condition": "succeeded()",
+                        "task": { "id": "2ff763a7-ce83-4e1f-bc89-0ae63477cebe", "versionSpec": "1.*", "definitionType": "task" },
+                        "inputs": {
+                            "PathtoPublish": "sharepoint/solution/$(pkgname)",
+                            "ArtifactName": "drop",
+                            "ArtifactType": "Container",
+                            "TargetPath": "",
+                            "Parallel": "false",
+                            "ParallelCount": "8",
+                            "FileCopyOptions": "",
+                            "StoreAsTar": "false"
+                        }
+                    }
+                ],
+                "name": "SPFxBuildJob",
+                "refName": "Job_1",
+                "condition": "succeeded()",
+                "target": { "executionOptions": { "type": 0 }, "allowScriptsAuthAccessOption": false, "type": 1 },
+                "jobAuthorizationScope": 1
+            }
+        ],
+        "target": { "agentSpecification": { "identifier": "ubuntu-20.04" } },
+        "type": 1
+    },
+    "repository": {
+        "properties": {
+            "apiUrl": "https://api.github.com/repos/arambazamba/spfx-devops",
+            "branchesUrl": "https://api.github.com/repos/arambazamba/spfx-devops/branches",
+            "cloneUrl": "https://github.com/arambazamba/spfx-devops.git",
+            "connectedServiceId": "8c81fe9b-3f6e-44da-b1eb-97c2175dbaef",
+            "defaultBranch": "main",
+            "fullName": "arambazamba/spfx-devops",
+            "hasAdminPermissions": "True",
+            "isFork": "False",
+            "isPrivate": "False",
+            "lastUpdated": "07/11/2021 12:21:07",
+            "manageUrl": "https://github.com/arambazamba/spfx-devops",
+            "nodeId": "MDEwOlJlcG9zaXRvcnkzODQ5NDA1MDc=",
+            "ownerId": "16348023",
+            "orgName": "arambazamba",
+            "refsUrl": "https://api.github.com/repos/arambazamba/spfx-devops/git/refs",
+            "safeRepository": "arambazamba/spfx-devops",
+            "shortName": "spfx-devops",
+            "ownerAvatarUrl": "https://avatars.githubusercontent.com/u/16348023?v=4",
+            "archived": "False",
+            "externalId": "384940507",
+            "ownerIsAUser": "True",
+            "checkoutNestedSubmodules": "false",
+            "cleanOptions": "0",
+            "fetchDepth": "0",
+            "gitLfsSupport": "false",
+            "reportBuildStatus": "true",
+            "skipSyncSource": "false",
+            "labelSourcesFormat": "$(build.buildNumber)",
+            "labelSources": "0"
+        },
+        "id": "arambazamba/spfx-devops",
+        "type": "GitHub",
+        "name": "arambazamba/spfx-devops",
+        "url": "https://github.com/arambazamba/spfx-devops.git",
+        "defaultBranch": "main",
+        "clean": "false",
+        "checkoutSubmodules": false
+    },
+    "processParameters": {},
+    "quality": 1,
+    "authoredBy": {
+        "displayName": "Alexander Pajer",
+        "url": "https://spsprodweu3.vssps.visualstudio.com/A6aa91e30-0fdc-4040-a4af-1d637da19519/_apis/Identities/459f3623-3d4d-6221-8365-dea680982fc6",
+        "_links": {
+            "avatar": {
+                "href": "https://dev.azure.com/integrationstraining/_apis/GraphProfile/MemberAvatars/aad.NDU5ZjM2MjMtM2Q0ZC03MjIxLTgzNjUtZGVhNjgwOTgyZmM2"
+            }
+        },
+        "id": "459f3623-3d4d-6221-8365-dea680982fc6",
+        "uniqueName": "alexander.pajer@integrations.at",
+        "imageUrl": "https://dev.azure.com/integrationstraining/_apis/GraphProfile/MemberAvatars/aad.NDU5ZjM2MjMtM2Q0ZC03MjIxLTgzNjUtZGVhNjgwOTgyZmM2",
+        "descriptor": "aad.NDU5ZjM2MjMtM2Q0ZC03MjIxLTgzNjUtZGVhNjgwOTgyZmM2"
+    },
+    "drafts": [],
+    "queue": {
+        "_links": { "self": { "href": "https://dev.azure.com/integrationstraining/_apis/build/Queues/296" } },
+        "id": 296,
+        "name": "Azure Pipelines",
+        "url": "https://dev.azure.com/integrationstraining/_apis/build/Queues/296",
+        "pool": { "id": 9, "name": "Azure Pipelines", "isHosted": true }
+    },
+    "id": 70,
+    "name": "SPFx Build Designer",
+    "url": "https://dev.azure.com/integrationstraining/05fd8454-e6fb-4f07-86a0-23dd76609962/_apis/build/Definitions/70?revision=4",
+    "uri": "vstfs:///Build/Definition/70",
+    "path": "\\",
+    "type": 2,
+    "queueStatus": 0,
+    "revision": 4,
+    "createdDate": "2021-07-11T12:24:45.747Z",
+    "project": {
+        "id": "05fd8454-e6fb-4f07-86a0-23dd76609962",
+        "name": "DevOpsWP",
+        "url": "https://dev.azure.com/integrationstraining/_apis/projects/05fd8454-e6fb-4f07-86a0-23dd76609962",
+        "state": 1,
+        "revision": 300,
+        "visibility": 2,
+        "lastUpdateTime": "2021-03-18T09:06:00.960Z"
+    }
+}
