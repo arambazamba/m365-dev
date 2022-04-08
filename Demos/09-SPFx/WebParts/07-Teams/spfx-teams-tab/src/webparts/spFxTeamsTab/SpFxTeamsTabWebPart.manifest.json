@@ -1,0 +1,21 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
+  "id": "c003b11f-13bc-4f3d-90c3-ffd71117fec7",
+  "alias": "SpFxTeamsTabWebPart",
+  "componentType": "WebPart",
+  "version": "*",
+  "manifestVersion": 2,
+  "requiresCustomScript": false,
+  "supportedHosts": ["SharePointWebPart", "TeamsPersonalApp", "TeamsTab", "SharePointFullPage"],
+  "supportsThemeVariants": true,
+  "preconfiguredEntries": [{
+    "groupId": "5c03119e-3074-46fd-976b-c60198311f70",
+    "group": { "default": "Other" },
+    "title": { "default": "SPFxTeamsTab" },
+    "description": { "default": "SPFxTeamsTab description" },
+    "officeFabricIconFontName": "Page",
+    "properties": {
+      "description": "SPFxTeamsTab"
+    }
+  }]
+}

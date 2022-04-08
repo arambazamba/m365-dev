@@ -1,0 +1,16 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "version": "1.14.0",
+    "libraryName": "spfx-teams-tab",
+    "libraryId": "de35b4f7-b325-4256-8a05-81f58fd906ab",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "spfx-teams-tab",
+    "solutionShortDescription": "spfx-teams-tab description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "webpart"
+  }
+}

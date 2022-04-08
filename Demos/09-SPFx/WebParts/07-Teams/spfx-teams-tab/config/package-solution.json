@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "spfx-teams-tab-client-side-solution",
+    "id": "de35b4f7-b325-4256-8a05-81f58fd906ab",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.14.0"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "spfx-teams-tab description"
+      },
+      "longDescription": {
+        "default": "spfx-teams-tab description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "spfx-teams-tab Feature",
+        "description": "The feature that activates elements of the spfx-teams-tab solution.",
+        "id": "41d36522-3183-4717-b53e-5eda682bf48e",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/spfx-teams-tab.sppkg"
+  }
+}
